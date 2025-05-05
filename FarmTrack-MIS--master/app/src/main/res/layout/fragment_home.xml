@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvWelcomeMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌾 Welcome to FarmTrack 🌿"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp"
+            android:shadowColor="#FF000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="6" />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="20dp"
+            card_view:cardElevation="14dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#F1F8E9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="18dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_user_profile"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="Profile"
+                    android:background="@drawable/circle_bg"
+                    android:padding="8dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvFarmerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👨‍🌾 Farmer: $username"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:textColor="#2E7D32" />
+
+                    <TextView
+                        android:id="@+id/tvFarmerStats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🌱 Total Farms: 0 | 🌾 Total Crops: 0"
+                        android:textSize="15sp"
+                        android:textColor="#4E342E" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <include layout="@layout/home_section_card" android:id="@+id/farmOverviewLayout" />
+        <include layout="@layout/home_section_card" android:id="@+id/upcomingEventsLayout" />
+        <include layout="@layout/home_section_card" android:id="@+id/marketPriceLayout" />
+        <include layout="@layout/home_section_card" android:id="@+id/governmentSchemesLayout" />
+        <include layout="@layout/home_section_card" android:id="@+id/knowledgeBaseLayout" />
+        <include layout="@layout/home_section_card" android:id="@+id/taskSchedulerLayout" />
+    </LinearLayout>
+</ScrollView>
